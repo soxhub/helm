@@ -2,6 +2,8 @@ FROM alpine:3.3
 
 MAINTAINER Rajiv Makhijani <rajiv@soxhub.com>
 
+RUN apk add --update --no-cache ca-certificates
+
 ENV VERSION v2.0.0-rc.2
 ENV FILENAME helm-${VERSION}-linux-amd64.tar.gz
 
