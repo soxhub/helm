@@ -1,6 +1,6 @@
 # Helm Docker Image
 
-## Helm Version: v2.0.0-rc.2
+## Helm Version: v2.0.1
 
 This repository is used to build an Alpine-linux based Docker image that contains the Helm binary. This can be useful for running the [helm](https://github.com/kubernetes/helm) binary from within a Kubernetes cluster.
 
