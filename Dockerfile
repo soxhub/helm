@@ -4,7 +4,7 @@ MAINTAINER Rajiv Makhijani <rajiv@soxhub.com>
 
 RUN apk add --update --no-cache ca-certificates
 
-ENV VERSION v2.2.0
+ENV VERSION v2.2.1
 ENV FILENAME helm-${VERSION}-linux-amd64.tar.gz
 
 WORKDIR /
