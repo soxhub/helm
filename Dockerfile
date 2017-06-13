@@ -15,4 +15,7 @@ RUN tar -zxvf /tmp/${FILENAME} -C /tmp \
   && mv /tmp/linux-amd64/helm /bin/helm \
   && rm -rf /tmp
 
+RUN /bin/helm init --client-only  
+RUN /bin/helm repo update
+
 ENTRYPOINT ["/bin/helm"]
