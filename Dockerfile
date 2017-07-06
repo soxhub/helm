@@ -4,7 +4,7 @@ MAINTAINER Rajiv Makhijani <rajiv@soxhub.com>
 
 RUN apk add --update --no-cache ca-certificates
 
-ENV VERSION v2.4.2
+ENV VERSION v2.5.0
 ENV FILENAME helm-${VERSION}-linux-amd64.tar.gz
 
 WORKDIR /
@@ -15,7 +15,6 @@ RUN tar -zxvf /tmp/${FILENAME} -C /tmp \
   && mv /tmp/linux-amd64/helm /bin/helm \
   && rm -rf /tmp
 
-RUN /bin/helm init --client-only  
-RUN /bin/helm repo update
+RUN /bin/helm init --client-only && /bin/helm repo update 
 
 ENTRYPOINT ["/bin/helm"]
