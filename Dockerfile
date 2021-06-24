@@ -12,8 +12,7 @@ WORKDIR /
 ADD https://get.helm.sh/${FILENAME} /tmp
 
 RUN tar -zxvf /tmp/${FILENAME} -C /tmp \
-  && mv /tmp/linux-amd64/helm /bin/helm \
-  && rm -rf /tmp
+  && mv /tmp/linux-amd64/helm /bin/helm
 
 RUN touch /tmp/foo
 
