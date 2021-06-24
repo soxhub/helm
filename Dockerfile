@@ -15,8 +15,6 @@ RUN tar -zxvf /tmp/${FILENAME} -C /tmp \
   && mv /tmp/linux-amd64/helm /bin/helm \
   && rm -rf /tmp
 
-RUN /bin/helm repo add stable https://kubernetes-charts.storage.googleapis.com/ && /bin/helm repo update
-
 RUN touch /tmp/foo
 
 ENTRYPOINT ["/bin/helm"]
