@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "running deploy.sh"
 re='https://([^\.]+)\.s3\.([^\.]+)\.amazonaws.com/([^[:space:]]*)'
 if ! [[ "$3" =~ $re ]]; then
   exit 1
