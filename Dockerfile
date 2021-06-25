@@ -15,8 +15,8 @@ WORKDIR /
 ADD https://get.helm.sh/${FILENAME} /tmp
 
 RUN tar -zxvf /tmp/${FILENAME} -C /tmp \
-  && mv /tmp/linux-amd64/helm helm 
+  && mv /tmp/linux-amd64/helm /bin/helm 
 
-COPY deploy.sh deploy.sh
-RUN chmod +x deploy.sh
-ENTRYPOINT ["deploy.sh"]
+COPY deploy.sh /bin/deploy.sh
+RUN chmod +x /bin/deploy.sh
+ENTRYPOINT ["/bin/deploy.sh"]
