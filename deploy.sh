@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 echo "running deploy.sh"
+echo "1: $1"
 re='https://([^\.]+)\.s3\.([^\.]+)\.amazonaws.com/([^[:space:]]*)'
 if ! [[ "$3" =~ $re ]]; then
+  echo "does not match regex"
   exit 1
 fi
 
