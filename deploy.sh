@@ -24,7 +24,7 @@ function assign_s3_url() {
 }
 
 function set_up_chart_locally() {
-  export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY
+  export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY # todo: make this unnecessary 
   export AWS_DEFAULT_REGION="${BUCKET_REGION}" 
   echo "aws s3 cp ${S3_LOCATION} chart.tgz"
   aws s3 cp "${S3_LOCATION}" chart.tgz
